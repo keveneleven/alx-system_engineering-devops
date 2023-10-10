@@ -1,22 +1,6 @@
 #!/usr/bin/env bash
-#checking file exists and stuff
-
-name=school
-if [ -e $name ]; then
-    echo "school file exists"
-else
-    echo "school file does not exist"
-    exit 1
-fi
-if [ ! -s $name ]; then
-    echo "school file is empty"
-else
-    echo "school file is not empty"
-fi
-if [ -f $name ]; then
-    echo "school is a regular file"
-<<<<<<< HEAD
-fi
-=======
-fi
->>>>>>> f5a782914d2015b25cb3bfce68feaa863ee10416
+#Creating a script that lists files
+for i in *
+do
+    echo "$i" | cut -f 2- -d '-'
+done

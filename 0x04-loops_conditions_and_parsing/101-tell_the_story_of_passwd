@@ -1,16 +1,18 @@
 #!/usr/bin/env bash
-# Write a Bash script that displays the content of the file /etc/passwd.
-# Requirements:
-	# You must use the while loop (for and until are forbidden)
-# Define the field separator as a colon (:)
-
-IFS=':'
-
-while read -r usr pswd uid gid uinfo hd csh
+#Script that displays the content of the file /etc/passwd
+while IFS= read -r line
 do
-	echo "The user $usr is part of the $gid gang, lives in $hd and rides $csh. $uid's place is protected by the passcode $pswd, more info about the user here: $uinfo"
-<<<<<<< HEAD
-done < /etc/passwd
-=======
-done < /etc/passwd
->>>>>>> f5a782914d2015b25cb3bfce68feaa863ee10416
+    username=$(echo "$line" | cut -f 1 -d ':')
+    password=$(echo "$line" | cut -f 2 -d ':')
+    userID=$(echo "$line" | cut -f 3 -d ':')
+    groupID=$(echo "$line" | cut -f 4 -d ':')
+    userINFO=$(echo "$line" | cut -f 5 -d ':')
+    home=$(echo "$line" | cut -f 6 -d ':')
+    command=$(echo "$line" | cut -f 7 -d ':')
+
+
+    echo -n "The user $username is part of the $groupID gang, "
+    echo -n "lives in $home and rides $command."
+    echo -n " $userID's place is protected by the passcode $password, "
+    echo "more info about the user here: $userINFO"
+done < "/etc/passwd"

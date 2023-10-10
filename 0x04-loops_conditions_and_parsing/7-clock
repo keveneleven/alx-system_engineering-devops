@@ -1,20 +1,14 @@
 #!/usr/bin/env bash
-#nested loop stuff
-
-hours=0
-minutes=1
-while [ $hours -ne 13 ]
+#Creating a script that uses a nested loop
+hour=0
+while [ $hour -le 12 ]
 do
-    echo "Hour: $hours"
-    ((hours++))
-    while [ $minutes -ne 60 ]
+    echo "Hour: $hour"
+    minutes=1
+    while [ $minutes -lt 60 ]
     do
-	echo $minutes
+	echo "$minutes"
 	((minutes++))
     done
-    ((minutes = 1))
-<<<<<<< HEAD
+    ((hour++))
 done
-=======
-done
->>>>>>> f5a782914d2015b25cb3bfce68feaa863ee10416

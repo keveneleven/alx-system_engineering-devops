@@ -1,24 +1,17 @@
 #!/usr/bin/env bash
-#fizzbuzz stuf
-
-count=1
-while [ $count -ne 101 ]
+#Program that prints FizzBuzz sequence
+for i in {1..100}
 do
-    if [ $((count % 15)) -eq 0 ]
+    if [ $((i % 5)) -eq 0 ] && [  $((i % 3)) -eq 0 ]
     then
 	echo "FizzBuzz"
-    elif [ $((count % 3)) -eq 0 ]
+    elif [ $((i % 5)) -eq 0 ]
+    then
+	echo "Buzz"
+    elif [ $((i % 3)) -eq 0 ]
     then
 	echo "Fizz"
-    elif [ $((count % 5)) -eq 0 ]
-    then
-        echo "Buzz"
     else
-	echo $count
+	echo "$i"
     fi
-    ((count++))
-<<<<<<< HEAD
 done
-=======
-done
->>>>>>> f5a782914d2015b25cb3bfce68feaa863ee10416
