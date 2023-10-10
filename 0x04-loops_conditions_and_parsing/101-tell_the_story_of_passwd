@@ -9,4 +9,8 @@ IFS=':'
 while read -r usr pswd uid gid uinfo hd csh
 do
 	echo "The user $usr is part of the $gid gang, lives in $hd and rides $csh. $uid's place is protected by the passcode $pswd, more info about the user here: $uinfo"
+<<<<<<< HEAD
 done < /etc/passwd
+=======
+done < /etc/passwd
+>>>>>>> f5a782914d2015b25cb3bfce68feaa863ee10416

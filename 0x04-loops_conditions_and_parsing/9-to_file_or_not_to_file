@@ -15,4 +15,8 @@ else
 fi
 if [ -f $name ]; then
     echo "school is a regular file"
+<<<<<<< HEAD
 fi
+=======
+fi
+>>>>>>> f5a782914d2015b25cb3bfce68feaa863ee10416

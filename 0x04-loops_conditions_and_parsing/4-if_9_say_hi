@@ -9,4 +9,8 @@ do
 	then
 		echo "Hi"
 	fi
+<<<<<<< HEAD
 done 
+=======
+done 
+>>>>>>> f5a782914d2015b25cb3bfce68feaa863ee10416
